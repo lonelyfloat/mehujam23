@@ -7,6 +7,7 @@
 #include "framework/audio.h"
 #include "framework/arena.h"
 #include "framework/proc_anim.h"
+#include "world.h"
 
 typedef struct Game {
     // Fields used in every game
@@ -19,7 +20,10 @@ typedef struct Game {
     int sfxBus, musicBus;
 
     float accumulator, time;
+
     bool quit;
+
+    World world;
 } Game;
 
 void Init(GameMemory* memory);

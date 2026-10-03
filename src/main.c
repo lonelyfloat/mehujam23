@@ -21,7 +21,7 @@ bool done = false;
 int main(int argc, char* argv[]) {
     // Initialize SDL context
 
-    Arena* programArena = ArenaCreate(100000); // Allocate 10 000 bytes for the game as a whole
+    Arena* programArena = ArenaCreate(1000000); // Allocate 1 000 000 bytes for the game as a whole
 
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMEPAD);
     MIX_Init();
@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
 
     // Initialize program context
     Game* game = ArenaAllocStruct(programArena, Game);
-    game->arena = ArenaGrabSection(programArena, 90000);
+    game->arena = ArenaGrabSection(programArena, 900000);
     game->window = window;
     game->renderer = renderer;
 

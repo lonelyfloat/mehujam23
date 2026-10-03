@@ -70,6 +70,7 @@ void* ArenaAllocAlign(Arena* arena, size_t bytes, size_t align) {
         memset(ptr, 0, bytes);
         return ptr;
     }
+    printf("offset: %d\n", arena->offset);
     // If there is not room for the allocation, abort
     fprintf(stderr, "ERROR: arena offset exceeds capacity\n");
     exit(1);
